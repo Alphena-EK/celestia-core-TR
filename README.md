@@ -18,80 +18,80 @@ Or [Blockchain](<https://en.wikipedia.org/wiki/Blockchain_(database)>), for shor
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
 | master | [![CircleCI](https://circleci.com/gh/tendermint/tendermint/tree/master.svg?style=shield)](https://circleci.com/gh/tendermint/tendermint/tree/master) </br> ![Tests](https://github.com/tendermint/tendermint/workflows/Tests/badge.svg?branch=master) | [![codecov](https://codecov.io/gh/tendermint/tendermint/branch/master/graph/badge.svg)](https://codecov.io/gh/tendermint/tendermint) | ![Lint](https://github.com/tendermint/tendermint/workflows/Lint/badge.svg) |
 
-Tendermint Core is Byzantine Fault Tolerant (BFT) middleware that takes a state transition machine - written in any programming language -
-and securely replicates it on many machines.
+Tendermint Core, herhangi bir programlama dilinde yazılmış bir durum geçiş makinesi alan Bizans Hata Toleranslı (BFT) ara yazılımıdır -
+ve birçok makinede güvenli bir şekilde çoğaltır.
 
-For protocol details, see [the specification](https://github.com/tendermint/spec).
+Protokol ayrıntıları için bkz. [the specification](https://github.com/tendermint/spec).
 
-For detailed analysis of the consensus protocol, including safety and liveness proofs,
-see our recent paper, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)".
+Güvenlik ve canlılık kanıtları dahil olmak üzere fikir birliği protokolünün ayrıntılı analizi için,
+son makalemize bakın, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)".
 
 ## Releases
 
-Please do not depend on master as your production branch. Use [releases](https://github.com/tendermint/tendermint/releases) instead.
+Lütfen üretim dalınız olarak master'a güvenmeyin. Use [releases](https://github.com/tendermint/tendermint/releases) instead.
 
-Tendermint is being used in production in both private and public environments,
-most notably the blockchains of the [Cosmos Network](https://cosmos.network/).
-However, we are still making breaking changes to the protocol and the APIs and have not yet released v1.0.
-See below for more details about [versioning](#versioning).
+Tendermint, hem özel hem de kamusal ortamlarda üretimde kullanılıyor,
+en önemlisi blok zincirleri [Cosmos Network](https://cosmos.network/).
+Ancak, protokolde ve API'lerde hala önemli değişiklikler yapıyoruz ve henüz v1.0'ı yayınlamadık.
+Kullanım hakkında daha fazla bilgi için aşağıya bakın [versioning](#versioning).
 
-In any case, if you intend to run Tendermint in production, we're happy to help. You can
-contact us [over email](mailto:hello@interchain.berlin) or [join the chat](https://discord.gg/AzefAFd).
+Her durumda, Tendermint'i üretimde çalıştırmayı düşünüyorsanız, size yardımcı olmaktan memnuniyet duyarız.. İletişime geçmek için bu adresleri 
+kullanın.[over email](mailto:hello@interchain.berlin) ya da [sohbete katılın](https://discord.gg/AzefAFd).
 
-## Security
+## Güvenlik
 
-To report a security vulnerability, see our [bug bounty
+Bir güvenlik açığını bildirmek için, bu proglara bakabilirsiniz [bug bounty
 program](https://hackerone.com/tendermint). 
-For examples of the kinds of bugs we're looking for, see [our security policy](SECURITY.md)
+Aradığımız hata türlerinin örnekleri için, buraya göz atın [our security policy](SECURITY.md)
 
-We also maintain a dedicated mailing list for security updates. We will only ever use this mailing list
-to notify you of vulnerabilities and fixes in Tendermint Core. You can subscribe [here](http://eepurl.com/gZ5hQD).
+Ayrıca güvenlik güncellemeleri için özel bir posta listesi tutuyoruz. Sadece bu posta listesini kullanacağız
+Tendermint Core'daki güvenlik açıklarını ve düzeltmeleri size bildirmek için. Abone olabilirsiniz [here](http://eepurl.com/gZ5hQD).
 
-## Minimum requirements
+##Minimum Gereksinimler
 
-| Requirement | Notes            |
+| Gereklilik  |   Notlar        |
 | ----------- | ---------------- |
 | Go version  | Go1.15 or higher |
 
-## Documentation
+## Belgeler
 
-Complete documentation can be found on the [website](https://docs.tendermint.com/master/).
+Eksiksiz belgeler adresinde bulunabilir. [website](https://docs.tendermint.com/master/).
 
-### Install
+### Yükleme
 
 See the [install instructions](/docs/introduction/install.md).
 
-### Quick Start
+### Hızlı Başlangıç
 
-- [Single node](/docs/introduction/quick-start.md)
+- [Tek node](/docs/introduction/quick-start.md)
 - [Local cluster using docker-compose](/docs/networks/docker-compose.md)
 - [Remote cluster using Terraform and Ansible](/docs/networks/terraform-and-ansible.md)
 - [Join the Cosmos testnet](https://cosmos.network/testnet)
 
 ## Contributing
 
-Please abide by the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
+lütfen riayet ediniz [Code of Conduct](CODE_OF_CONDUCT.md) tüm etkileşimlerde.
 
-Before contributing to the project, please take a look at the [contributing guidelines](CONTRIBUTING.md)
-and the [style guide](STYLE_GUIDE.md). You may also find it helpful to read the
-[specifications](https://github.com/tendermint/spec), watch the [Developer Sessions](/docs/DEV_SESSIONS.md), 
-and familiarize yourself with our
+Projeye katkıda bulunmadan önce, lütfen bir göz atın [contributing guidelines](CONTRIBUTING.md)
+ve [style guide](STYLE_GUIDE.md). Şunu da okumanız faydalı olabilir.
+[specifications](https://github.com/tendermint/spec), izleyin [Developer Sessions](/docs/DEV_SESSIONS.md), 
+ve kendinizi tanıyın
 [Architectural Decision Records](https://github.com/tendermint/tendermint/tree/master/docs/architecture).
 
-## Versioning
+## Sürüm oluşturma
 
-### Semantic Versioning
+### Semantik Sürüm Oluşturma
 
-Tendermint uses [Semantic Versioning](http://semver.org/) to determine when and how the version changes.
-According to SemVer, anything in the public API can change at any time before version 1.0.0
+Tendermint kullanımı [Semantic Versioning](http://semver.org/) sürümün ne zaman ve nasıl değişeceğini belirlemek için.
+SemVer'e göre, genel API'deki herhangi bir şey 1.0.0 sürümünden önce herhangi bir zamanda değişebilir.
 
-To provide some stability to Tendermint users in these 0.X.X days, the MINOR version is used
-to signal breaking changes across a subset of the total public API. This subset includes all
-interfaces exposed to other processes (cli, rpc, p2p, etc.), but does not
-include the Go APIs.
+Bu 0.X.X günlerinde Tendermint kullanıcılarına biraz istikrar sağlamak için MINOR sürümü kullanılıyor
+toplam genel API'nin bir alt kümesindeki son değişiklikleri bildirmek için. Bu alt küme, tüm
+diğer işlemlere (cli, rpc, p2p, vb.) maruz kalan ancak
+Go API'lerini içerir.
 
-That said, breaking changes in the following packages will be documented in the
-CHANGELOG even if they don't lead to MINOR version bumps:
+Bununla birlikte, aşağıdaki paketlerdeki kırılma değişiklikleri,
+CHANGELOG, KÜÇÜK sürüm darbelerine yol açmasalar bile:
 
 - crypto
 - config
@@ -113,47 +113,47 @@ CHANGELOG even if they don't lead to MINOR version bumps:
 - rpc/client
 - types
 
-### Upgrades
+### Yükseltmeler
 
-In an effort to avoid accumulating technical debt prior to 1.0.0,
-we do not guarantee that breaking changes (ie. bumps in the MINOR version)
-will work with existing Tendermint blockchains. In these cases you will
-have to start a new blockchain, or write something custom to get the old
-data into the new chain. However, any bump in the PATCH version should be 
-compatible with existing blockchain histories.
+1.0.0 öncesi teknik borç birikiminden kaçınmak amacıyla,
+değişikliklerin (yani MINOR sürümündeki tümseklerin) bozulacağını garanti etmiyoruz.
+mevcut Tendermint blok zincirleriyle çalışacak. Bu durumlarda yapacaksın
+yeni bir blok zinciri başlatmanız veya eskisini elde etmek için özel bir şeyler yazmanız gerekir.
+verileri yeni zincire aktarın. Ancak, PATCH sürümündeki herhangi bir tümsek,
+mevcut blok zinciri geçmişleriyle uyumlu.
 
 
-For more information on upgrading, see [UPGRADING.md](./UPGRADING.md).
+Yükseltme hakkında daha fazla bilgi için, bakınız [UPGRADING.md](./UPGRADING.md).
 
-### Supported Versions
+### Desteklenen Sürümler
 
-Because we are a small core team, we only ship patch updates, including security updates,
-to the most recent minor release and the second-most recent minor release. Consequently,
-we strongly recommend keeping Tendermint up-to-date. Upgrading instructions can be found
-in [UPGRADING.md](./UPGRADING.md).
+Küçük bir çekirdek ekip olduğumuz için, güvenlik güncellemeleri de dahil olmak üzere yalnızca yama güncellemelerini gönderiyoruz,
+en son küçük sürüme ve en son ikinci küçük sürüme. Sonuç olarak,
+Tendermint'i güncel tutmanızı şiddetle tavsiye ederiz. Yükseltme talimatları bulunabilir
+ [UPGRADING.md](./UPGRADING.md).
 
-## Resources
+## Kaynaklar
 
-### Tendermint Core
+### Tendermint çekirdeği
 
-For details about the blockchain data structures and the p2p protocols, see the
+Blok zinciri veri yapıları ve p2p protokolleri hakkında ayrıntılar için, bakınız
 [Tendermint specification](https://docs.tendermint.com/master/spec/).
 
-For details on using the software, see the [documentation](/docs/) which is also
-hosted at: <https://docs.tendermint.com/master/>
+Yazılımı kullanmayla ilgili ayrıntılar için, buuraya bakınız [documentation](/docs/) aynı zamanda 
+ev sahipliği yapan: <https://docs.tendermint.com/master/>
 
-### Tools
+### Araçlar
 
-Benchmarking is provided by [`tm-load-test`](https://github.com/informalsystems/tm-load-test).
-Additional tooling can be found in [/docs/tools](/docs/tools).
+Kıyaslama şu şekilde sağlanır: [`tm-load-test`](https://github.com/informalsystems/tm-load-test).
+Ek araçlar şurada bulunabilir [/docs/tools](/docs/tools).
 
-### Applications
+### Uygulamalar
 
 - [Cosmos SDK](http://github.com/cosmos/cosmos-sdk); a cryptocurrency application framework
 - [Ethermint](http://github.com/cosmos/ethermint); Ethereum on Tendermint
 - [Many more](https://tendermint.com/ecosystem)
 
-### Research
+### Araştırmalar
 
 - [The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)
 - [Master's Thesis on Tendermint](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769)
